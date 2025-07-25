@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h2 class="text-center">Calculation Results</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <strong>Annual Tax:</strong> ${{ annual_tax|floatformat:2 }}
+                </div>
+                <div class="mb-3">
+                    <strong>Pay After Tax:</strong> ${{ pay_after_tax|floatformat:2 }}
+                </div>
+                <a href="/" class="btn btn-primary mt-3">Back to Form</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
